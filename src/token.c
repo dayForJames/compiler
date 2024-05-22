@@ -1,22 +1,20 @@
 #include "../include/token.h"
 
 void
-updateToken(char* token, const char* c, int* token_cur_size, int* token_max_size, const int* token_init_size)
+updateToken(char** token, const char* c, int* token_cur_size, int* token_max_size, const int* token_init_size)
 {   
     if (*token_cur_size >= *token_max_size)
     {
         (*token_max_size) += (*token_init_size);
-        token = (char*)realloc(token, sizeof(char) * (*token_max_size + 1));
+        (*token) = (char*)realloc((*token), sizeof(char) * (*token_max_size + 1));
     }
 
-    token[*token_cur_size] = *c;
+    (*token)[*token_cur_size] = *c;
     (*token_cur_size)++;
-
-    printf("%d %d\n", *token_cur_size, *token_max_size);
 }
 
 void 
-updateTokenizer(Token* tokens, const char* token, const int* token_size, int* tokens_cur_size, int* tokens_size, const int* tokens_init_size)
+updateTokenizer(Token** tokens, const char* token, const int* token_size, int* tokens_cur_size, int* tokens_size, const int* tokens_init_size)
 {
     if (*token_size == 0)
     {
@@ -30,15 +28,15 @@ updateTokenizer(Token* tokens, const char* token, const int* token_size, int* to
         
     }
 
-    tokens[*tokens_cur_size].value = malloc(sizeof(char) * (*token_size + 1));
-    strncpy(tokens[*tokens_cur_size].value, token, *token_size);
+    (*tokens)[*tokens_cur_size].value = malloc(sizeof(char) * (*token_size + 1));
+    strncpy((*tokens)[*tokens_cur_size].value, token, *token_size);
     
-    tokens[*tokens_cur_size].size = *token_size;
+    (*tokens)[*tokens_cur_size].size = *token_size;
     (*tokens_cur_size)++;
 }
 
 Token* 
-tokenize(const char* str)
+tokenize(const char* str, int* tokens_len)
 {
     size_t size = strlen(str);
 
@@ -46,26 +44,73 @@ tokenize(const char* str)
     Token* tokens = malloc(sizeof(Token) * tokens_init_size);
 
     int token_init_size = 10, token_max_size = 10, token_cur_size = 0; 
-    char* cur_token = malloc(sizeof(char) * token_init_size);
 
     for (size_t i = 0; i < size; i++)
     {
-        if (str[i] != 13 && str[i] != 10 && str[i] != '\0' && str[i] != '\t' && str[i] != ' ')
+        if (isalpha(str[i]))
         {
-            updateToken(cur_token, str + i, &token_cur_size, &token_max_size, &token_init_size);
-            // printf("%s\n", cur_token);
-        }
-        else
-        {
-            // updateTokenizer(tokens, cur_token, &token_cur_size, &tokens_cur_size, &tokens_size, &tokens_init_size);
+            char* cur_token = malloc(sizeof(char) * token_init_size);
+
+            while (isalpha(str[i]))
+            {
+                updateToken(&cur_token, &str[i], &token_cur_size, &token_max_size, &token_init_size);
+                i++;
+            }
+
+            i--;
+
+            updateTokenizer(&tokens, cur_token, &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
+
+            if (strncmp(tokens[tokens_cur_size - 1].value, "ret", tokens[tokens_cur_size - 1].size))
+            {
+                tokens[tokens_cur_size - 1].type = _return;
+            }
+
             free(cur_token);
 
             token_cur_size = 0;
             token_max_size = token_init_size;
+        }
+        else if (isdigit(str[i]))
+        {
+            char* cur_token = malloc(sizeof(char) * token_init_size);
 
-            cur_token = malloc(sizeof(char) * token_init_size);
+            while (isdigit(str[i]))
+            {
+                updateToken(&cur_token, &str[i], &token_cur_size, &token_max_size, &token_init_size);
+                i++;
+            }
+
+            i--;
+
+            updateTokenizer(&tokens, cur_token, &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
+            free(cur_token);
+
+            tokens[tokens_cur_size - 1].type = int_lit;
+
+            token_cur_size = 0;
+            token_max_size = token_init_size;
+        }
+        else if (str[i] == ';')
+        {
+            token_cur_size = 1;
+            updateTokenizer(&tokens, ";", &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
+            tokens[tokens_cur_size - 1].type = semi;
+
+            token_cur_size = 0;
         }
     }
 
+    *tokens_len = tokens_cur_size;
+
     return tokens;
+}
+
+char* 
+tokens2asm(const Token* tokens, const int tokens_len)
+{
+    for (int i = 0; i < tokens_len; i++)
+    {
+        
+    }
 }

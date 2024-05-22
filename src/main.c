@@ -41,12 +41,13 @@ main(int argc, char* argv[])
 
     fclose(file_ptr);
 
-    tokenize(buf);
+    int tokens_len = 0;
+    Token* tokens = tokenize(buf, &tokens_len);
 
-    // for (int i = 0; i < 2; i++)
-    // {
-    //     printf("%s\n", tokens[i].value);
-    // }
+    for (int i = 0; i < tokens_len; i++)
+    {
+        printf("%s\n", tokens[i].value);
+    }
     
     return 0;
 }
