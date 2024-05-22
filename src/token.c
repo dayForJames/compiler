@@ -27,6 +27,7 @@ updateTokenizer(Token* tokens, const char* token, const int* token_size, int* to
     {
         (*tokens_size) += (*tokens_init_size);
         tokens = realloc(tokens, sizeof(Token) * (*tokens_size));
+        
     }
 
     tokens[*tokens_cur_size].value = malloc(sizeof(char) * (*token_size + 1));
