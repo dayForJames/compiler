@@ -91,14 +91,14 @@ tokenize(const char* str, int* tokens_len)
             token_cur_size = 0;
             token_max_size = token_init_size;
         }
-        else if (str[i] == ';')
-        {
-            token_cur_size = 1;
-            updateTokenizer(&tokens, ";", &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
-            tokens[tokens_cur_size - 1].type = semi;
+        // else if (str[i] == ';')
+        // {
+        //     token_cur_size = 1;
+        //     updateTokenizer(&tokens, ";", &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
+        //     tokens[tokens_cur_size - 1].type = semi;
 
-            token_cur_size = 0;
-        }
+        //     token_cur_size = 0;
+        // }
     }
 
     *tokens_len = tokens_cur_size;
@@ -109,8 +109,18 @@ tokenize(const char* str, int* tokens_len)
 char* 
 tokens2asm(const Token* tokens, const int tokens_len)
 {
+
+    char* asm_code = malloc(sizeof(char) * 500);
+    int cur_size = 0, max_size = 500;
+
     for (int i = 0; i < tokens_len; i++)
     {
-        
+        if (tokens[i].value == _return)
+        {
+            if (i < tokens_len) 
+            {
+
+            }
+        }
     }
 }
