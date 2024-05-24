@@ -68,87 +68,36 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/src/lexer.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/lexer.c.obj: CMakeFiles/main.dir/includes_C.rsp
-CMakeFiles/main.dir/src/lexer.c.obj: F:/c++/compiler/src/lexer.c
-CMakeFiles/main.dir/src/lexer.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/lexer.c.obj"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/lexer.c.obj -MF CMakeFiles\main.dir\src\lexer.c.obj.d -o CMakeFiles\main.dir\src\lexer.c.obj -c F:\c++\compiler\src\lexer.c
+CMakeFiles/main.dir/ML/main.c.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/ML/main.c.obj: CMakeFiles/main.dir/includes_C.rsp
+CMakeFiles/main.dir/ML/main.c.obj: F:/c++/compiler/ML/main.c
+CMakeFiles/main.dir/ML/main.c.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/ML/main.c.obj"
+	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/ML/main.c.obj -MF CMakeFiles\main.dir\ML\main.c.obj.d -o CMakeFiles\main.dir\ML\main.c.obj -c F:\c++\compiler\ML\main.c
 
-CMakeFiles/main.dir/src/lexer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/lexer.c.i"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\c++\compiler\src\lexer.c > CMakeFiles\main.dir\src\lexer.c.i
+CMakeFiles/main.dir/ML/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/ML/main.c.i"
+	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\c++\compiler\ML\main.c > CMakeFiles\main.dir\ML\main.c.i
 
-CMakeFiles/main.dir/src/lexer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/lexer.c.s"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\c++\compiler\src\lexer.c -o CMakeFiles\main.dir\src\lexer.c.s
-
-CMakeFiles/main.dir/src/main.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/main.c.obj: CMakeFiles/main.dir/includes_C.rsp
-CMakeFiles/main.dir/src/main.c.obj: F:/c++/compiler/src/main.c
-CMakeFiles/main.dir/src/main.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/main.c.obj"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.c.obj -MF CMakeFiles\main.dir\src\main.c.obj.d -o CMakeFiles\main.dir\src\main.c.obj -c F:\c++\compiler\src\main.c
-
-CMakeFiles/main.dir/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/main.c.i"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\c++\compiler\src\main.c > CMakeFiles\main.dir\src\main.c.i
-
-CMakeFiles/main.dir/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/main.c.s"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\c++\compiler\src\main.c -o CMakeFiles\main.dir\src\main.c.s
-
-CMakeFiles/main.dir/src/new_asm.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/new_asm.c.obj: CMakeFiles/main.dir/includes_C.rsp
-CMakeFiles/main.dir/src/new_asm.c.obj: F:/c++/compiler/src/new_asm.c
-CMakeFiles/main.dir/src/new_asm.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/new_asm.c.obj"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/new_asm.c.obj -MF CMakeFiles\main.dir\src\new_asm.c.obj.d -o CMakeFiles\main.dir\src\new_asm.c.obj -c F:\c++\compiler\src\new_asm.c
-
-CMakeFiles/main.dir/src/new_asm.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/new_asm.c.i"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\c++\compiler\src\new_asm.c > CMakeFiles\main.dir\src\new_asm.c.i
-
-CMakeFiles/main.dir/src/new_asm.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/new_asm.c.s"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\c++\compiler\src\new_asm.c -o CMakeFiles\main.dir\src\new_asm.c.s
-
-CMakeFiles/main.dir/src/token.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/token.c.obj: CMakeFiles/main.dir/includes_C.rsp
-CMakeFiles/main.dir/src/token.c.obj: F:/c++/compiler/src/token.c
-CMakeFiles/main.dir/src/token.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/src/token.c.obj"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/token.c.obj -MF CMakeFiles\main.dir\src\token.c.obj.d -o CMakeFiles\main.dir\src\token.c.obj -c F:\c++\compiler\src\token.c
-
-CMakeFiles/main.dir/src/token.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/token.c.i"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\c++\compiler\src\token.c > CMakeFiles\main.dir\src\token.c.i
-
-CMakeFiles/main.dir/src/token.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/token.c.s"
-	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\c++\compiler\src\token.c -o CMakeFiles\main.dir\src\token.c.s
+CMakeFiles/main.dir/ML/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/ML/main.c.s"
+	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\c++\compiler\ML\main.c -o CMakeFiles\main.dir\ML\main.c.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/lexer.c.obj" \
-"CMakeFiles/main.dir/src/main.c.obj" \
-"CMakeFiles/main.dir/src/new_asm.c.obj" \
-"CMakeFiles/main.dir/src/token.c.obj"
+"CMakeFiles/main.dir/ML/main.c.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main.exe: CMakeFiles/main.dir/src/lexer.c.obj
-main.exe: CMakeFiles/main.dir/src/main.c.obj
-main.exe: CMakeFiles/main.dir/src/new_asm.c.obj
-main.exe: CMakeFiles/main.dir/src/token.c.obj
+main.exe: CMakeFiles/main.dir/ML/main.c.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: C:/msys64/mingw64/lib/libgomp.dll.a
 main.exe: C:/msys64/mingw64/lib/libmingwthrd.a
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\c++\compiler\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

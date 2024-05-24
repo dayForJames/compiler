@@ -254,6 +254,9 @@ OpenMP_gomp_LIBRARY:FILEPATH=C:/msys64/mingw64/lib/libgomp.dll.a
 //Path to the mingwthrd library for OpenMP
 OpenMP_mingwthrd_LIBRARY:FILEPATH=C:/msys64/mingw64/lib/libmingwthrd.a
 
+//For ML purposes
+USE_ML:BOOL=ON
+
 //Value Computed by CMake
 compiler_BINARY_DIR:STATIC=F:/c++/compiler/build
 

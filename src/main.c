@@ -44,10 +44,10 @@ main(int argc, char* argv[])
     int tokens_len = 0;
     Token* tokens = tokenize(buf, &tokens_len);
 
-    for (int i = 0; i < tokens_len; i++)
-    {
-        printf("%s\n", tokens[i].value);
-    }
+    // for (int i = 0; i < tokens_len; i++)
+    // {
+    //     printf("%s\n", tokens[i].value);
+    // }
     
     return 0;
 }

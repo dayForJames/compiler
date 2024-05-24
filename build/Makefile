@@ -128,101 +128,29 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/lexer.obj: src/lexer.c.obj
-.PHONY : src/lexer.obj
+ML/main.obj: ML/main.c.obj
+.PHONY : ML/main.obj
 
 # target to build an object file
-src/lexer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/lexer.c.obj
-.PHONY : src/lexer.c.obj
+ML/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ML/main.c.obj
+.PHONY : ML/main.c.obj
 
-src/lexer.i: src/lexer.c.i
-.PHONY : src/lexer.i
-
-# target to preprocess a source file
-src/lexer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/lexer.c.i
-.PHONY : src/lexer.c.i
-
-src/lexer.s: src/lexer.c.s
-.PHONY : src/lexer.s
-
-# target to generate assembly for a file
-src/lexer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/lexer.c.s
-.PHONY : src/lexer.c.s
-
-src/main.obj: src/main.c.obj
-.PHONY : src/main.obj
-
-# target to build an object file
-src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.c.obj
-.PHONY : src/main.c.obj
-
-src/main.i: src/main.c.i
-.PHONY : src/main.i
+ML/main.i: ML/main.c.i
+.PHONY : ML/main.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.c.i
-.PHONY : src/main.c.i
+ML/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ML/main.c.i
+.PHONY : ML/main.c.i
 
-src/main.s: src/main.c.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.c.s
-.PHONY : src/main.c.s
-
-src/new_asm.obj: src/new_asm.c.obj
-.PHONY : src/new_asm.obj
-
-# target to build an object file
-src/new_asm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/new_asm.c.obj
-.PHONY : src/new_asm.c.obj
-
-src/new_asm.i: src/new_asm.c.i
-.PHONY : src/new_asm.i
-
-# target to preprocess a source file
-src/new_asm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/new_asm.c.i
-.PHONY : src/new_asm.c.i
-
-src/new_asm.s: src/new_asm.c.s
-.PHONY : src/new_asm.s
+ML/main.s: ML/main.c.s
+.PHONY : ML/main.s
 
 # target to generate assembly for a file
-src/new_asm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/new_asm.c.s
-.PHONY : src/new_asm.c.s
-
-src/token.obj: src/token.c.obj
-.PHONY : src/token.obj
-
-# target to build an object file
-src/token.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/token.c.obj
-.PHONY : src/token.c.obj
-
-src/token.i: src/token.c.i
-.PHONY : src/token.i
-
-# target to preprocess a source file
-src/token.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/token.c.i
-.PHONY : src/token.c.i
-
-src/token.s: src/token.c.s
-.PHONY : src/token.s
-
-# target to generate assembly for a file
-src/token.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/token.c.s
-.PHONY : src/token.c.s
+ML/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ML/main.c.s
+.PHONY : ML/main.c.s
 
 # Help Target
 help:
@@ -233,18 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... main
-	@echo ... src/lexer.obj
-	@echo ... src/lexer.i
-	@echo ... src/lexer.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
-	@echo ... src/new_asm.obj
-	@echo ... src/new_asm.i
-	@echo ... src/new_asm.s
-	@echo ... src/token.obj
-	@echo ... src/token.i
-	@echo ... src/token.s
+	@echo ... ML/main.obj
+	@echo ... ML/main.i
+	@echo ... ML/main.s
 .PHONY : help
 
 

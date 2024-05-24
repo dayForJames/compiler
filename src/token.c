@@ -47,58 +47,15 @@ tokenize(const char* str, int* tokens_len)
 
     for (size_t i = 0; i < size; i++)
     {
-        if (isalpha(str[i]))
+        if (isdigit(str[i]))
         {
-            char* cur_token = malloc(sizeof(char) * token_init_size);
+            char* token = malloc(sizeof(char) * token_max_size);
 
-            while (isalpha(str[i]))
+            while(isdigit(str[i]))
             {
-                updateToken(&cur_token, &str[i], &token_cur_size, &token_max_size, &token_init_size);
-                i++;
+                // updateToken();
             }
-
-            i--;
-
-            updateTokenizer(&tokens, cur_token, &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
-
-            if (strncmp(tokens[tokens_cur_size - 1].value, "ret", tokens[tokens_cur_size - 1].size))
-            {
-                tokens[tokens_cur_size - 1].type = _return;
-            }
-
-            free(cur_token);
-
-            token_cur_size = 0;
-            token_max_size = token_init_size;
         }
-        else if (isdigit(str[i]))
-        {
-            char* cur_token = malloc(sizeof(char) * token_init_size);
-
-            while (isdigit(str[i]))
-            {
-                updateToken(&cur_token, &str[i], &token_cur_size, &token_max_size, &token_init_size);
-                i++;
-            }
-
-            i--;
-
-            updateTokenizer(&tokens, cur_token, &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
-            free(cur_token);
-
-            tokens[tokens_cur_size - 1].type = int_lit;
-
-            token_cur_size = 0;
-            token_max_size = token_init_size;
-        }
-        // else if (str[i] == ';')
-        // {
-        //     token_cur_size = 1;
-        //     updateTokenizer(&tokens, ";", &token_cur_size, &tokens_cur_size, &tokens_max_size, &tokens_init_size);
-        //     tokens[tokens_cur_size - 1].type = semi;
-
-        //     token_cur_size = 0;
-        // }
     }
 
     *tokens_len = tokens_cur_size;

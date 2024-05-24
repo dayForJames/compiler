@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <ctype.h>
+#include <stdio.h>
 
 typedef enum TokenType
 {
