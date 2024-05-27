@@ -25,7 +25,8 @@ CMakeFiles/main.dir/ML/main.c.obj: F:/c++/compiler/ML/main.c \
   C:/msys64/mingw64/include/sys/timeb.h \
   C:/msys64/mingw64/include/sec_api/sys/timeb_s.h \
   C:/msys64/mingw64/include/_timeval.h \
-  C:/msys64/mingw64/include/pthread_time.h
+  C:/msys64/mingw64/include/pthread_time.h \
+  C:/msys64/mingw64/include/math.h
 
 
 C:/msys64/mingw64/include/corecrt.h:
@@ -77,3 +78,5 @@ C:/msys64/mingw64/include/sec_api/sys/timeb_s.h:
 C:/msys64/mingw64/include/_timeval.h:
 
 C:/msys64/mingw64/include/pthread_time.h:
+
+C:/msys64/mingw64/include/math.h:
