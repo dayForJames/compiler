@@ -30,7 +30,7 @@ set_property(TARGET main PROPERTY C_STANDARD 99)
 set_target_properties(main PROPERTIES LINKER_LANGUAGE C)
 
 else()
-file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c)
+file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/C_compiler/*.c)
 
 add_executable(main ${SOURCES})
 set_property(TARGET main PROPERTY C_STANDARD 99)

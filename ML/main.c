@@ -99,6 +99,12 @@ GD(float* X, float* y, int feature_count, int samples_count)
     while (loss > EPS);
 }
 
+void 
+test(float* w, float* X, float* y, int feature_count, int samples_count)
+{
+    
+}
+
 int
 main(int argc, char const *argv[])
 {
